@@ -1,1 +1,1 @@
-find_package(OCILib MODULE REQUIRED)
+find_package(ocilib MODULE REQUIRED)

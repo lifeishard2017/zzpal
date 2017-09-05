@@ -15,8 +15,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/zzpal")
 
 configure_file(
-    ${CMAKE_CURRENT_SOURCE_DIR}/CMake/pre-config.h.cmake
-    ${CMAKE_CURRENT_BINARY_DIR}/include/config/pre-config.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/CMake/preconfig.h.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/include/config/preconfig.h
 )
 
 # dependences
