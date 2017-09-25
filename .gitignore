@@ -1,3 +1,5 @@
 .vscode/.cmaketools.json
 .vscode/
 build/
+.DS_Store
+thirdpart/

@@ -1,10 +1,11 @@
 #include <iostream>
 
 #include "ocilib.hpp"
+#include "log.h"
 
 using namespace ocilib;
 
-int main(void)
+void testOCI()
 {
     try
     {
@@ -34,8 +35,21 @@ int main(void)
     {
         std::cout << ex.what() << std::endl;
     }
-
     Environment::Cleanup();
+}
 
-    return EXIT_SUCCESS;
+void testBoostLog()
+{
+    BOOST_LOG_TRIVIAL(trace) << "A trace severity message";
+    BOOST_LOG_TRIVIAL(debug) << "A debug severity message";
+    BOOST_LOG_TRIVIAL(info) << "An informational severity message";
+    BOOST_LOG_TRIVIAL(warning) << "A warning severity message";
+    BOOST_LOG_TRIVIAL(error) << "An error severity message";
+    BOOST_LOG_TRIVIAL(fatal) << "A fatal severity message";
+}
+int main(void)
+{
+    testOCI();
+    testBoostLog();
+    return 0;
 }

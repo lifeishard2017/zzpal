@@ -1,14 +1,11 @@
-set(Boost_NO_SYSTEM_PATHS TRUE) 
+set(Boost_NO_SYSTEM_PATHS ON) 
 set(Boost_USE_STATIC_LIBS OFF)
 
-###############################
-# set flags
-###############################
 # for Boost.Log
 add_definitions("-DBOOST_LOG_DYN_LINK")
 
 if (Boost_NO_SYSTEM_PATHS)
-  set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/build/boost")
+  set(BOOST_ROOT "${CMAKE_SOURCE_DIR}/build/boost")
   set(BOOST_INCLUDE_DIRS "${BOOST_ROOT}/include")
   set(BOOST_LIBRARY_DIRS "${BOOST_ROOT}/lib")
 endif (Boost_NO_SYSTEM_PATHS)
